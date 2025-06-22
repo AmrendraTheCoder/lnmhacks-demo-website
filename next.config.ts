@@ -27,6 +27,12 @@ const nextConfig: NextConfig = {
         port: "",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "cdn.jim-nielsen.com",
+        port: "",
+        pathname: "/**",
+      },
     ],
   },
 };
