@@ -12,6 +12,7 @@ import CTFSection from "@/components/sections/CTFSection";
 import QuerySection from "@/components/sections/QuerySection";
 import { FAQDemo } from "@/components/ui/faq-section";
 import { Footer } from "@/components/sections/Footer";
+// import RainingLettersSection from "@/components/sections/RainingLettersSection";
 import { SplashCursor } from "@/components/ui/splash-cursor";
 import { LoadingScreen } from "@/components/ui/loading-screen";
 import Navigation from "@/components/Navigation";
@@ -37,6 +38,7 @@ export default function Home() {
         <QuerySection />
         <FAQDemo />
         <Footer />
+        {/* <RainingLettersSection /> */}
         <Navigation />
       </main>
     </>
