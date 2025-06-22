@@ -262,7 +262,7 @@ const VenueSection = () => {
             <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-green-400/50 rounded-full" />
           </div>
           <p className="text-base sm:text-lg text-gray-400 max-w-2xl mx-auto font-mono tracking-wide">
-            &gt; Experience innovation at LNMIIT's world-class campus
+            &gt; Experience innovation at LNMIIT&apos;s world-class campus
             <br />
             <span className="text-green-400">
               &gt; where technology meets excellence

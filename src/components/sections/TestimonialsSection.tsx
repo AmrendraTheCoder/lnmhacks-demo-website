@@ -11,8 +11,8 @@ export default function TestimonialsSection() {
             What Hackers Say About Us
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Don't just take our word for it. Here's what previous participants
-            have to say about their LNMHACKS experience.
+            Don&apos;t just take our word for it. Here&apos;s what previous
+            participants have to say about their LNMHACKS experience.
           </p>
         </div>
 

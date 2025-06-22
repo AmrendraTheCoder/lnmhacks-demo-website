@@ -70,8 +70,8 @@ export default function QuerySection() {
           How Can We Help You?
         </h2>
         <p className="text-center text-lg text-gray-600 mb-8">
-          Have questions about LNMHACKS 8.0? Send us your queries and we'll get
-          back to you!
+          Have questions about LNMHACKS 8.0? Send us your queries and we&apos;ll
+          get back to you!
         </p>
         <form onSubmit={handleSubmit}>
           <PromptBox />

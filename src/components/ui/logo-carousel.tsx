@@ -48,65 +48,67 @@ const distributeLogos = (allLogos: Logo[], columnCount: number): Logo[][] => {
   return columns;
 };
 
-const LogoColumn: React.FC<LogoColumnProps> = React.memo(
-  ({ logos, index, currentTime }) => {
-    const cycleInterval = 2000;
-    const columnDelay = index * 200;
-    const adjustedTime =
-      (currentTime + columnDelay) % (cycleInterval * logos.length);
-    const currentIndex = Math.floor(adjustedTime / cycleInterval);
-    const CurrentLogo = useMemo(
-      () => logos[currentIndex].img,
-      [logos, currentIndex]
-    );
+const LogoColumn: React.FC<LogoColumnProps> = React.memo(function LogoColumn({
+  logos,
+  index,
+  currentTime,
+}) {
+  const cycleInterval = 2000;
+  const columnDelay = index * 200;
+  const adjustedTime =
+    (currentTime + columnDelay) % (cycleInterval * logos.length);
+  const currentIndex = Math.floor(adjustedTime / cycleInterval);
+  const CurrentLogo = useMemo(
+    () => logos[currentIndex].img,
+    [logos, currentIndex]
+  );
 
-    return (
-      <motion.div
-        className="relative h-14 w-24 overflow-hidden md:h-24 md:w-48"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: index * 0.1,
-          duration: 0.5,
-          ease: "easeOut",
-        }}
-      >
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={`${logos[currentIndex].id}-${currentIndex}`}
-            className="absolute inset-0 flex items-center justify-center"
-            initial={{ y: "10%", opacity: 0, filter: "blur(8px)" }}
-            animate={{
-              y: "0%",
-              opacity: 1,
-              filter: "blur(0px)",
-              transition: {
-                type: "spring",
-                stiffness: 300,
-                damping: 20,
-                mass: 1,
-                bounce: 0.2,
-                duration: 0.5,
-              },
-            }}
-            exit={{
-              y: "-20%",
-              opacity: 0,
-              filter: "blur(6px)",
-              transition: {
-                type: "tween",
-                ease: "easeIn",
-                duration: 0.3,
-              },
-            }}
-          >
-            <CurrentLogo className="h-20 w-20 max-h-[80%] max-w-[80%] object-contain md:h-32 md:w-32" />
-          </motion.div>
-        </AnimatePresence>
-      </motion.div>
-    );
-  }
-);
+  return (
+    <motion.div
+      className="relative h-14 w-24 overflow-hidden md:h-24 md:w-48"
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        delay: index * 0.1,
+        duration: 0.5,
+        ease: "easeOut",
+      }}
+    >
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={`${logos[currentIndex].id}-${currentIndex}`}
+          className="absolute inset-0 flex items-center justify-center"
+          initial={{ y: "10%", opacity: 0, filter: "blur(8px)" }}
+          animate={{
+            y: "0%",
+            opacity: 1,
+            filter: "blur(0px)",
+            transition: {
+              type: "spring",
+              stiffness: 300,
+              damping: 20,
+              mass: 1,
+              bounce: 0.2,
+              duration: 0.5,
+            },
+          }}
+          exit={{
+            y: "-20%",
+            opacity: 0,
+            filter: "blur(6px)",
+            transition: {
+              type: "tween",
+              ease: "easeIn",
+              duration: 0.3,
+            },
+          }}
+        >
+          <CurrentLogo className="h-20 w-20 max-h-[80%] max-w-[80%] object-contain md:h-32 md:w-32" />
+        </motion.div>
+      </AnimatePresence>
+    </motion.div>
+  );
+});
 
 interface LogoCarouselProps {
   columnCount?: number;

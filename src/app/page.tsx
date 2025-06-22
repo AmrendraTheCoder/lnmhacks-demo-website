@@ -5,7 +5,7 @@ import HeroSection from "@/components/sections/HeroSection";
 import { TimelineSection } from "@/components/sections/TimelineSection";
 import SponsorsSection from "@/components/sections/SponsorsSection";
 import FeaturesSection from "@/components/sections/FeaturesSection";
-import FeatureDemo from "@/components/sections/FeatureDemo";
+
 import { StatsDemo } from "@/components/sections/StatsDemo";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import CTFSection from "@/components/sections/CTFSection";

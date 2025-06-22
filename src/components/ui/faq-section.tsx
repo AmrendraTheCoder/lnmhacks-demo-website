@@ -1,4 +1,4 @@
-import { Check, PhoneCall } from "lucide-react";
+import { PhoneCall } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import {
   Accordion,
@@ -13,12 +13,12 @@ function FAQ() {
     {
       question: "What is LNMHACKS 8.0?",
       answer:
-        "LNMHACKS 8.0 is the eighth edition of our flagship hackathon at LNM Institute of Information Technology. It's a 48-hour coding marathon where developers, designers, and innovators come together to build amazing projects and compete for prizes worth ₹5 lakhs.",
+        "LNMHACKS 8.0 is the eighth edition of our flagship hackathon at LNM Institute of Information Technology. It&apos;s a 48-hour coding marathon where developers, designers, and innovators come together to build amazing projects and compete for prizes worth ₹5 lakhs.",
     },
     {
       question: "Who can participate in LNMHACKS 8.0?",
       answer:
-        "LNMHACKS is open to all students from any college or university. Whether you're a beginner or an experienced developer, we welcome participants of all skill levels. You can participate solo or form teams of up to 4 members.",
+        "LNMHACKS is open to all students from any college or university. Whether you&apos;re a beginner or an experienced developer, we welcome participants of all skill levels. You can participate solo or form teams of up to 4 members.",
     },
     {
       question: "When and where will LNMHACKS 8.0 take place?",
@@ -38,7 +38,7 @@ function FAQ() {
     {
       question: "What should I bring to the hackathon?",
       answer:
-        "Bring your laptop, chargers, any hardware you might need, a valid ID card, and a positive attitude! We'll provide meals, snacks, accommodation, WiFi, and workspace. Don't forget to bring your creativity and problem-solving skills.",
+        "Bring your laptop, chargers, any hardware you might need, a valid ID card, and a positive attitude! We&apos;ll provide meals, snacks, accommodation, WiFi, and workspace. Don&apos;t forget to bring your creativity and problem-solving skills.",
     },
     {
       question: "Will there be mentors and workshops?",
@@ -71,9 +71,9 @@ function FAQ() {
                   Everything you need to know about LNMHACKS 8.0
                 </h4>
                 <p className="text-lg max-w-xl lg:max-w-lg leading-relaxed tracking-tight text-gray-300 text-left">
-                  Got questions about the hackathon? We've got answers! From
-                  registration to prizes, find everything you need to know about
-                  LNMHACKS 8.0 right here.
+                  Got questions about the hackathon? We&apos;ve got answers!
+                  From registration to prizes, find everything you need to know
+                  about LNMHACKS 8.0 right here.
                 </p>
               </div>
               <div className="">
