@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { CommitsGrid } from "@/components/ui/commits-grid";
-import { Badge } from "@/components/ui/badge";
+
 import { GradientButton } from "@/components/ui/gradient-button";
 import { LampContainer } from "@/components/ui/lamp";
 
@@ -54,8 +54,7 @@ export default function CTFSection() {
 
           {/* Commits Grid Animation */}
           <div className="mb-12">
-          <CommitsGrid text={ctfTexts[currentTextIndex]} />
-            
+            <CommitsGrid text={ctfTexts[currentTextIndex]} />
           </div>
 
           {/* Call to Action */}

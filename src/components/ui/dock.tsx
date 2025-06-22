@@ -26,11 +26,11 @@ import { cn } from "@/lib/utils";
 interface DockContextType {
   width: number;
   hovered: boolean;
-  setIsZooming: (value: boolean) => void;
+  setIsZooming: (_value: boolean) => void;
   zoomLevel: MotionValue<number>;
   mouseX: MotionValue<number>;
   animatingIndexes: number[];
-  setAnimatingIndexes: (indexes: number[]) => void;
+  setAnimatingIndexes: (_indexes: number[]) => void;
 }
 
 const INITIAL_WIDTH = 48;
@@ -208,8 +208,8 @@ export function DockCard({ children, id, onClick }: DockCardProps) {
 
   useMousePosition(
     {
-      onChange: ({ value }) => {
-        const mouseX = value.x;
+      onChange: ({ value: mousePosition }) => {
+        const mouseX = mousePosition.x;
         if (dock.width > 0) {
           const transformedValue =
             INITIAL_WIDTH +
@@ -267,7 +267,8 @@ export function DockCard({ children, id, onClick }: DockCardProps) {
 
   useEffect(() => {
     return () => {
-      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+      const timeout = timeoutRef.current;
+      if (timeout) clearTimeout(timeout);
     };
   }, []);
 
@@ -329,7 +330,7 @@ export function DockDivider() {
   );
 }
 
-type UseWindowResizeCallback = (width: number, height: number) => void;
+type UseWindowResizeCallback = (_width: number, _height: number) => void;
 
 function useWindowResize(callback: UseWindowResizeCallback) {
   const callbackRef = useCallbackRef(callback);
@@ -355,11 +356,14 @@ function useCallbackRef<T extends (...args: any[]) => any>(callback: T): T {
     callbackRef.current = callback;
   });
 
-  return useMemo(() => ((...args) => callbackRef.current?.(...args)) as T, []);
+  return useMemo(
+    () => ((..._args) => callbackRef.current?.(..._args)) as T,
+    []
+  );
 }
 
 interface MousePositionOptions {
-  onChange?: (position: { value: { x: number; y: number } }) => void;
+  onChange?: (_position: { value: { x: number; y: number } }) => void;
 }
 
 export function useMousePosition(

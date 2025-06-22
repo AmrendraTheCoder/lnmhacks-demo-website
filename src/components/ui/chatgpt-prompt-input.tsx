@@ -1,4 +1,5 @@
 import * as React from "react";
+import Image from "next/image";
 import * as TooltipPrimitive from "@radix-ui/react-tooltip";
 import * as PopoverPrimitive from "@radix-ui/react-popover";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
@@ -55,7 +56,7 @@ const PopoverContent = React.forwardRef<
 PopoverContent.displayName = PopoverPrimitive.Content.displayName;
 const Dialog = DialogPrimitive.Root;
 const DialogPortal = DialogPrimitive.Portal;
-const DialogTrigger = DialogPrimitive.Trigger;
+
 const DialogOverlay = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Overlay>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Overlay>
@@ -426,10 +427,12 @@ export const PromptBox = React.forwardRef<
               onClick={() => setIsImageDialogOpen(true)}
             >
               {" "}
-              <img
+              <Image
                 src={imagePreview}
                 alt="Image preview"
                 className="h-14.5 w-14.5 rounded-[1rem]"
+                width={58}
+                height={58}
               />{" "}
             </button>{" "}
             <button
@@ -443,10 +446,12 @@ export const PromptBox = React.forwardRef<
           </div>{" "}
           <DialogContent>
             {" "}
-            <img
+            <Image
               src={imagePreview}
               alt="Full size preview"
               className="w-full max-h-[95vh] object-contain rounded-[24px]"
+              width={800}
+              height={600}
             />{" "}
           </DialogContent>{" "}
         </Dialog>
@@ -579,17 +584,6 @@ export const PromptBox = React.forwardRef<
 PromptBox.displayName = "PromptBox";
 
 export function PromptBoxDemo() {
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const formData = new FormData(event.currentTarget);
-    const message = formData.get("message");
-    // In a real app, you would also handle the uploaded file here.
-    if (!message && !event.currentTarget.querySelector("img")) {
-      return;
-    }
-    alert(`Message Submitted!`);
-  };
-
   return (
     <div className="flex min-h-screen w-full flex-col items-center justify-center bg-black p-4">
       <div className="w-full max-w-xl flex flex-col gap-10">

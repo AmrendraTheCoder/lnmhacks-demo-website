@@ -602,7 +602,7 @@ function SplashCursor() {
     let dye: any, velocity: any, divergence: any, curl: any, pressure: any;
 
     // Programs
-    const copyProgram = new Program(baseVertexShader, copyShader);
+    // const copyProgram = new Program(baseVertexShader, copyShader);
     const clearProgram = new Program(baseVertexShader, clearShader);
     const splatProgram = new Program(baseVertexShader, splatShader);
     const advectionProgram = new Program(baseVertexShader, advectionShader);
@@ -1154,4 +1154,3 @@ function SplashCursor() {
 }
 
 export { SplashCursor };
-

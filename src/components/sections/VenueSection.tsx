@@ -8,7 +8,6 @@ import {
   Navigation,
   Clock,
   Wifi,
-  Users,
   Monitor,
   Shield,
   Coffee,

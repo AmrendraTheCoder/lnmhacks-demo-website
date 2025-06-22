@@ -202,7 +202,7 @@ var ctx,
     tension: 0.99,
   };
 
-function Node(this: any) {
+function Node(this: { x: number; y: number; vy: number; vx: number }) {
   this.x = 0;
   this.y = 0;
   this.vy = 0;

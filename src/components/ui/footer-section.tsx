@@ -12,14 +12,12 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import {
-  Facebook,
   Instagram,
   Linkedin,
   Moon,
   Send,
   Sun,
   Twitter,
-  Github,
   MessageCircle,
 } from "lucide-react";
 
