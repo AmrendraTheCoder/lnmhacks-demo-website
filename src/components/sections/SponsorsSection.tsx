@@ -250,7 +250,7 @@ const allLogos = [
 
 export default function SponsorsSection() {
   return (
-    <section id="sponsors" className="py-20 bg-white">
+    <section id="sponsors" className="relative py-20 bg-white z-20">
       <div className="container mx-auto pb-16 px-4">
         <div className="space-y-8">
           <div className="mx-auto flex w-full max-w-screen-lg flex-col items-center space-y-12">

@@ -216,7 +216,7 @@ export function TimelineSection() {
   ];
 
   return (
-    <div id="timeline" className="min-h-screen w-full pb-20">
+    <div id="timeline" className="relative min-h-screen w-full pb-20 z-20 bg-white">
       <Timeline data={data} />
     </div>
   );
