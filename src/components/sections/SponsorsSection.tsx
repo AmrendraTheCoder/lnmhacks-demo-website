@@ -253,7 +253,7 @@ export default function SponsorsSection() {
     <section id="sponsors" className="py-20 bg-white">
       <div className="container mx-auto pb-16 px-4">
         <div className="space-y-8">
-          <div className="mx-auto flex w-full max-w-screen-lg flex-col items-center space-y-8">
+          <div className="mx-auto flex w-full max-w-screen-lg flex-col items-center space-y-12">
             <div className="text-center">
               <GradientHeading variant="secondary" size="md">
                 The best are already here
@@ -263,7 +263,20 @@ export default function SponsorsSection() {
               </GradientHeading>
             </div>
 
-            <LogoCarousel columnCount={3} logos={allLogos} />
+            {/* First Layer - 3 columns */}
+            <div className="w-full flex justify-center">
+              <LogoCarousel columnCount={3} logos={allLogos} />
+            </div>
+
+            {/* Second Layer - 4 columns */}
+            <div className="w-full flex justify-center opacity-80">
+              <LogoCarousel columnCount={4} logos={allLogos} />
+            </div>
+
+            {/* Third Layer - 5 columns */}
+            <div className="w-full flex justify-center opacity-60">
+              <LogoCarousel columnCount={5} logos={allLogos} />
+            </div>
           </div>
         </div>
       </div>

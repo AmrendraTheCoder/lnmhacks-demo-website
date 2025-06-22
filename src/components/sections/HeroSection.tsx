@@ -15,17 +15,14 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section
-      id="home"
-      className="relative min-h-screen bg-white text-black overflow-hidden"
-    >
+    <section id="home" className="relative min-h-screen bg-white text-black overflow-visible">
       <StatusBar />
-
-      {/* Globe Background - positioned behind content */}
-      <div className="absolute inset-0 flex items-center justify-center opacity-10 z-0">
-        <Globe className="top-0" />
+      
+      {/* Globe Background - positioned to show half earth effect */}
+      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 z-0">
+        <Globe className="w-[800px] h-[800px] md:w-[1000px] md:h-[1000px] opacity-30" />
       </div>
-
+      
       <div className="animation-delay-8 animate-fadeIn mt-20 flex flex-col items-center justify-center px-4 text-center md:mt-20 relative z-10">
         <div className="z-10 mb-6 mt-10 sm:justify-center md:mb-4 md:mt-20">
           <div className="relative flex items-center whitespace-nowrap rounded-full border border-gray-300 bg-white px-3 py-1 text-xs leading-6 text-gray-600">
@@ -46,7 +43,7 @@ export default function HeroSection() {
 
         <div className="mb-10 mt-4 md:mt-6">
           <div className="px-2">
-            <div className="relative mx-auto h-full max-w-7xl border border-black p-6 md:px-12 md:py-20 bg-white/90 backdrop-blur-sm">
+            <div className="relative mx-auto h-full max-w-7xl border border-black p-6 md:px-12 md:py-20 bg-white/95 backdrop-blur-sm">
               <h1 className="flex select-none flex-col px-3 py-2 text-center text-5xl font-semibold leading-none tracking-tight md:flex-col md:text-8xl lg:flex-row lg:text-8xl">
                 <DIcons.Plus
                   strokeWidth={4}
