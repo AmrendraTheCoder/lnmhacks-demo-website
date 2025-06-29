@@ -3,13 +3,13 @@
 import React, { useState } from "react";
 import HeroSection from "@/components/sections/HeroSection";
 import { TimelineSection } from "@/components/sections/TimelineSection";
-import SponsorsSection from "@/components/sections/SponsorsSection";
+import ProjectsSection from "@/components/sections/SponsorsSection";
 import FeaturesSection from "@/components/sections/FeaturesSection";
 
 import { StatsDemo } from "@/components/sections/StatsDemo";
-import TestimonialsSection from "@/components/sections/TestimonialsSection";
-import CTFSection from "@/components/sections/CTFSection";
-import QuerySection from "@/components/sections/QuerySection";
+import ProjectHighlightsSection from "@/components/sections/TestimonialsSection";
+import ContactSection from "@/components/sections/CTFSection";
+import AboutSection from "@/components/sections/QuerySection";
 import { FAQDemo } from "@/components/ui/faq-section";
 import { Footer } from "@/components/sections/Footer";
 // import RainingLettersSection from "@/components/sections/RainingLettersSection";
@@ -29,13 +29,13 @@ export default function Home() {
         <SplashCursor />
         <HeroSection />
         <TimelineSection />
-        <SponsorsSection />
+        <ProjectsSection />
         <FeaturesSection />
-        <CTFSection />
+        <AboutSection />
         {/* <FeatureDemo /> */}
         <StatsDemo />
-        <TestimonialsSection />
-        <QuerySection />
+        <ProjectHighlightsSection />
+        <ContactSection />
         <FAQDemo />
         <Footer />
         {/* <RainingLettersSection /> */}

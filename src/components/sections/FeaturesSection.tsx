@@ -14,11 +14,11 @@ import { GradientButton } from "@/components/ui/gradient-button";
 const features = [
   {
     Icon: CodeIcon,
-    name: "Code & Build",
+    name: "Full-Stack Development",
     description:
-      "72 hours of non-stop coding to build your dream project from scratch.",
-    href: "#register",
-    cta: "Join Now",
+      "Building end-to-end web applications with modern tech stack and best practices.",
+    href: "#projects",
+    cta: "View Projects",
     background: (
       <div className="absolute -right-10 -top-10 opacity-60">
         <div className="w-32 h-32 border border-gray-300 rounded-lg transform rotate-12 bg-gradient-to-br from-white to-gray-100">
@@ -35,16 +35,17 @@ const features = [
   },
   {
     Icon: PersonIcon,
-    name: "Team Formation",
-    description: "Find your perfect co-founders and build your dream team.",
-    href: "#discord",
-    cta: "Find Team",
+    name: "Design & Creative",
+    description:
+      "UI/UX design, video editing, and visual storytelling since Class 8.",
+    href: "#skills",
+    cta: "See Designs",
     background: (
       <div className="absolute -right-8 -top-8 opacity-50">
         <div className="flex space-x-2">
-          <div className="w-8 h-8 bg-black rounded-full"></div>
-          <div className="w-8 h-8 bg-gray-600 rounded-full"></div>
-          <div className="w-8 h-8 bg-black rounded-full"></div>
+          <div className="w-8 h-8 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full"></div>
+          <div className="w-8 h-8 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-full"></div>
+          <div className="w-8 h-8 bg-gradient-to-br from-green-400 to-emerald-400 rounded-full"></div>
         </div>
       </div>
     ),
@@ -52,17 +53,16 @@ const features = [
   },
   {
     Icon: GearIcon,
-    name: "Tech Workshops",
-    description: "Learn cutting-edge technologies from industry experts.",
-    href: "#schedule",
-    cta: "View Schedule",
+    name: "Mobile Development",
+    description:
+      "Native app development with Expo - Doubt Solver & LNMIIT Carpool apps.",
+    href: "#projects",
+    cta: "View Apps",
     background: (
       <div className="absolute -right-6 -top-6 opacity-40">
-        <div
-          className="w-16 h-16 border-2 border-black rounded-full animate-spin"
-          style={{ animationDuration: "3s" }}
-        >
-          <div className="w-4 h-4 bg-black rounded-full m-6"></div>
+        <div className="w-12 h-20 bg-gradient-to-b from-black to-gray-600 rounded-xl border-2 border-gray-300">
+          <div className="w-8 h-1 bg-gray-400 rounded-full mx-auto mt-2"></div>
+          <div className="w-6 h-10 bg-gradient-to-b from-blue-400 to-blue-600 rounded mx-auto mt-2"></div>
         </div>
       </div>
     ),
@@ -70,14 +70,16 @@ const features = [
   },
   {
     Icon: RocketIcon,
-    name: "Launch Your Startup",
-    description: "Turn your hack into the next big thing with mentorship.",
-    href: "#mentors",
-    cta: "Meet Mentors",
+    name: "Entrepreneurial Mindset",
+    description:
+      "From dropshipping to SaaS - always exploring business opportunities.",
+    href: "#journey",
+    cta: "Read Story",
     background: (
       <div className="absolute -right-4 -top-4 opacity-60">
-        <div className="w-12 h-16 bg-gradient-to-t from-black to-gray-400 rounded-t-full transform rotate-12">
+        <div className="w-12 h-16 bg-gradient-to-t from-orange-500 to-yellow-400 rounded-t-full transform rotate-12">
           <div className="w-2 h-2 bg-white rounded-full mx-auto mt-2"></div>
+          <div className="w-1 h-8 bg-gradient-to-b from-orange-300 to-red-400 mx-auto"></div>
         </div>
       </div>
     ),
@@ -85,14 +87,14 @@ const features = [
   },
   {
     Icon: LightningBoltIcon,
-    name: "Win Big Prizes",
+    name: "Web3 & Innovation",
     description:
-      "Compete for ₹50L+ in prizes, internships, and exclusive opportunities.",
-    href: "#prizes",
-    cta: "See Prizes",
+      "Deep diving into blockchain, AI/ML, and competitive programming for future tech.",
+    href: "#skills",
+    cta: "Explore Tech",
     background: (
       <div className="absolute -right-8 -top-8 opacity-50">
-        <div className="text-6xl">🏆</div>
+        <div className="text-6xl animate-pulse">⚡</div>
       </div>
     ),
     className: "lg:col-start-3 lg:col-end-3 lg:row-start-2 lg:row-end-4",
@@ -101,17 +103,17 @@ const features = [
 
 export function FeaturesSection() {
   return (
-    <section id="features" className="py-20 bg-white relative overflow-hidden">
+    <section id="skills" className="py-20 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
-            Why Join LNMHACKS 8.0?
+            Skills & Expertise
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Experience the ultimate hackathon journey with world-class
-            facilities, mentorship, and opportunities to launch your tech
-            career.
+            A comprehensive skill set built through years of learning,
+            experimenting, and creating. From design to development, business to
+            innovation.
           </p>
         </div>
 
@@ -125,7 +127,7 @@ export function FeaturesSection() {
         {/* Bottom CTA */}
         <div className="text-center mt-16">
           <GradientButton className="inline-flex items-center space-x-2 px-8 py-4 text-lg font-semibold">
-            <span>Ready to hack?</span>
+            <span>Let's collaborate!</span>
             <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
           </GradientButton>
         </div>

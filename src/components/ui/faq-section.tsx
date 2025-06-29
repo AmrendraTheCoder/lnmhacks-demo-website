@@ -1,117 +1,101 @@
-import { PhoneCall } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
+"use client";
+
+import React from "react";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { GradientButton } from "@/components/ui/gradient-button";
 
-function FAQ() {
-  const faqData = [
-    {
-      question: "What is LNMHACKS 8.0?",
-      answer:
-        "LNMHACKS 8.0 is the eighth edition of our flagship hackathon at LNM Institute of Information Technology. It&apos;s a 48-hour coding marathon where developers, designers, and innovators come together to build amazing projects and compete for prizes worth ₹5 lakhs.",
-    },
-    {
-      question: "Who can participate in LNMHACKS 8.0?",
-      answer:
-        "LNMHACKS is open to all students from any college or university. Whether you&apos;re a beginner or an experienced developer, we welcome participants of all skill levels. You can participate solo or form teams of up to 4 members.",
-    },
-    {
-      question: "When and where will LNMHACKS 8.0 take place?",
-      answer:
-        "LNMHACKS 8.0 will be held at LNM Institute of Information Technology, Jaipur from March 15-17, 2024. The event starts on Friday evening and concludes on Sunday evening with the prize distribution ceremony.",
-    },
-    {
-      question: "Is there any registration fee?",
-      answer:
-        "No, LNMHACKS 8.0 is completely free to participate! We provide meals, accommodation, swag, and all the resources you need during the hackathon. Just bring your laptop and enthusiasm to code.",
-    },
-    {
-      question: "What are the tracks and themes for this year?",
-      answer:
-        "This year we have 6 exciting tracks: Web3 & Blockchain, AI/ML, Healthcare Tech, Fintech, Social Impact, and Open Innovation. You can build anything that fits into these categories or surprise us with something completely new!",
-    },
-    {
-      question: "What should I bring to the hackathon?",
-      answer:
-        "Bring your laptop, chargers, any hardware you might need, a valid ID card, and a positive attitude! We&apos;ll provide meals, snacks, accommodation, WiFi, and workspace. Don&apos;t forget to bring your creativity and problem-solving skills.",
-    },
-    {
-      question: "Will there be mentors and workshops?",
-      answer:
-        "Absolutely! We have industry experts from top tech companies as mentors. There will be workshops on various technologies, pitch sessions, and one-on-one mentoring throughout the event to help you build better products.",
-    },
-    {
-      question: "What are the prizes and what happens after the hackathon?",
-      answer:
-        "We have prizes worth ₹5 lakhs including cash prizes, internship opportunities, and goodies. Winners get recognition, networking opportunities with industry leaders, and potential investment discussions for promising startups. Many past participants have turned their hackathon projects into successful companies!",
-    },
-  ];
+const faqs = [
+  {
+    question: "What technologies do you specialize in?",
+    answer:
+      "I work with modern web technologies including React, Next.js, TypeScript, Tailwind CSS, and Node.js. For mobile development, I use React Native with Expo. I'm also exploring AI/ML, Web3, and competitive programming.",
+  },
+  {
+    question: "Are you available for freelance projects?",
+    answer:
+      "Yes! I'm open to freelance projects, especially those involving full-stack web development, mobile apps, or UI/UX design. I'm particularly interested in projects that solve real-world problems and have meaningful impact.",
+  },
+  {
+    question: "What's your experience with business and entrepreneurship?",
+    answer:
+      "I've experimented with multiple business ventures including dropshipping, book reselling, and YouTube content creation. While not all were successful, each taught me valuable lessons about markets, logistics, and customer needs that inform my approach to building tech solutions.",
+  },
+  {
+    question: "How do you approach learning new technologies?",
+    answer:
+      "I believe in learning by building. Whether it's creating my father's business website or developing campus solutions like the carpool app, I prefer hands-on projects that solve real problems while teaching me new skills.",
+  },
+  {
+    question: "What are your current focus areas?",
+    answer:
+      "I'm actively learning AI/ML algorithms, competitive programming, advanced system design, and exploring Web3 technologies. I'm also focused on building more complex full-stack applications and contributing to open source projects.",
+  },
+  {
+    question: "Do you offer mentorship or collaborate with other students?",
+    answer:
+      "Absolutely! I enjoy collaborating with fellow students and sharing knowledge. Whether it's helping with project ideas, technical guidance, or discussing entrepreneurial ventures, I'm always open to meaningful collaborations.",
+  },
+  {
+    question: "What's your long-term vision?",
+    answer:
+      "I aim to build a successful tech startup that solves meaningful problems. My goal is to combine technical expertise with business acumen to create solutions that have real impact. I also want to excel in competitive programming and contribute significantly to the tech community.",
+  },
+  {
+    question: "How can we get in touch for project discussions?",
+    answer:
+      "You can reach out through the contact form on this site, connect with me on LinkedIn, or check out my work on GitHub. I'm always excited to discuss new project ideas and potential collaborations!",
+  },
+];
 
+export function FAQDemo() {
   return (
-    <div className="w-full py-20 lg:py-40 bg-black text-white">
-      <div className="container mx-auto">
-        <div className="grid lg:grid-cols-2 gap-10">
-          <div className="flex gap-10 flex-col">
-            <div className="flex gap-4 flex-col">
-              <div>
-                <Badge
-                  variant="outline"
-                  className="text-blue-400 border-blue-400"
-                >
-                  FAQ
-                </Badge>
-              </div>
-              <div className="flex gap-2 flex-col">
-                <h4 className="text-3xl md:text-5xl tracking-tighter max-w-xl text-left font-regular text-white">
-                  Everything you need to know about LNMHACKS 8.0
-                </h4>
-                <p className="text-lg max-w-xl lg:max-w-lg leading-relaxed tracking-tight text-gray-300 text-left">
-                  Got questions about the hackathon? We&apos;ve got answers!
-                  From registration to prizes, find everything you need to know
-                  about LNMHACKS 8.0 right here.
-                </p>
-              </div>
-              <div className="">
-                <GradientButton className="gap-4" variant="variant">
-                  Still have questions? Contact us{" "}
-                  <PhoneCall className="w-4 h-4" />
-                </GradientButton>
-              </div>
-            </div>
-          </div>
-          <Accordion type="single" collapsible className="w-full">
-            {faqData.map((faq, index) => (
+    <section id="faq" className="py-20 bg-white">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+            Frequently Asked Questions
+          </h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Common questions about my work, experience, and approach to
+            technology and business.
+          </p>
+        </div>
+
+        <div className="bg-white rounded-2xl border border-gray-200 p-6 md:p-8">
+          <Accordion type="single" collapsible className="w-full space-y-2">
+            {faqs.map((faq, index) => (
               <AccordionItem
                 key={index}
-                value={`index-${index}`}
-                className="border-gray-700"
+                value={`item-${index}`}
+                className="border border-gray-100 rounded-lg px-4 hover:bg-gray-50 transition-colors duration-200"
               >
-                <AccordionTrigger className="text-white hover:text-blue-400">
+                <AccordionTrigger className="text-left font-semibold text-gray-900 hover:text-black py-4">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-gray-300">
+                <AccordionContent className="text-gray-700 pb-4 leading-relaxed">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
         </div>
+
+        <div className="text-center mt-12">
+          <p className="text-gray-600 mb-4">
+            Have more questions or want to discuss a project?
+          </p>
+          <a
+            href="#contact"
+            className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold transition-colors"
+          >
+            Get in touch →
+          </a>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
-
-function FAQDemo() {
-  return (
-    <div className="w-full">
-      <FAQ />
-    </div>
-  );
-}
-
-export { FAQ, FAQDemo };
